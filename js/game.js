@@ -6,24 +6,24 @@ var game = {
     levels: {
 
         start: {
-            message: "Every gang in NY is going to the Bronx tonight",
+            message: "You have been choosen to be the supreme ruler of a The Empire. Its a great honor but the title carries great responsibility.",
             choices: [
                 {
-                    text: "Go to the BX",
+                    text: "Accpet your fate and become supreme ruler",
                     nextLevel: "bronx",
                 },
 
                 {
-                    text: "Stay in BK",
-                    nextLevel: "brooklyn",
+                    text: "Run/Move Away",
+                    nextLevel: "end1",
                 },
             ]
         },
 
-        bronx: {
+        riot: {
             background_image: "cyrus.gif",
             music: "digit.m4a",
-            message: "Cyrus is shot!!!",
+            message: "You gain rule over The Empire during a riot. Side 1, the majority, is asking for renovations of security and general well being for their home planet. While Side 2, the minority, want more advancments in your millitary as the fear/forsee a future lose from rebelians and outside forces.",
             choices: [
                 {
                     text: "Tell police",
@@ -33,21 +33,17 @@ var game = {
                     text: "Run!!!!!",
                     nextLevel: "run",
                 },
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                },
             ]
         },
 
-        brooklyn: {
-            message: "No one ever hears of the Warriors. The Rogues shoot Cyrus and go on to run all the crime in NY",
+        end1: {
+            message: "You live your life on the run from The Empire",
              background_image: "rogues.gif",
              music: "Mobb Deep - Shook Ones.mp3",
             choices: [
                 {
 
-                    text: "Start over",
+                    text: "Start over?",
                     nextLevel: "start",
                 },
             ]
