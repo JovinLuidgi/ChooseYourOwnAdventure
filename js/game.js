@@ -10,7 +10,7 @@ var game = {
             choices: [
                 {
                     text: "Accpet your fate and become supreme ruler",
-                    nextLevel: "bronx",
+                    nextLevel: "empire",
                 },
 
                 {
@@ -20,18 +20,17 @@ var game = {
             ]
         },
 
-        riot: {
+        empire: {
             background_image: "cyrus.gif",
-            music: "digit.m4a",
-            message: "You gain rule over The Empire during a riot. Side 1, the majority, is asking for renovations of security and general well being for their home planet. While Side 2, the minority, want more advancments in your millitary as the fear/forsee a future lose from rebelians and outside forces.",
+            message: "You gain rule over The Empire during a riot. Side 1, the majority, is asking for renovations of security and general well being for their home planet. While Side 2, the minority, want more advancments in your millitary as they fear/forsee a future lose from rebelians and outside forces.",
             choices: [
                 {
-                    text: "Tell police",
-                    nextLevel: "snitch",
+                    text: "Side1",
+                    nextLevel: "side1",
                 },
                 {
-                    text: "Run!!!!!",
-                    nextLevel: "run",
+                    text: "Side2",
+                    nextLevel: "side2",
                 },
             ]
         },
@@ -39,7 +38,6 @@ var game = {
         end1: {
             message: "You live your life on the run from The Empire",
              background_image: "rogues.gif",
-             music: "Mobb Deep - Shook Ones.mp3",
             choices: [
                 {
 
@@ -49,157 +47,79 @@ var game = {
             ]
         },
         
-        snitch: {
+        side1: {
             background_image: "riffs.gif",
-            music: "Mobb Deep - Shook Ones.mp3",
-            message: "The police hand you over to the Gramercy Riffs for a $20",
+            message: "Most fo your subjects accept you as ruler, but you have been advised that there is a small rebellion is being formed. You could deal with it but a few outside forces have declared war on The Empire",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Ignore the reballion",
+                    nextLevel: "ignore",
+                },
+                {
+                    text: "Fight off the rebellion",
+                    nextLevel: "fight",
                 },
             ]
         },
         
-        run: {
+        ignore: {
             background_image: "orphans.gif",
-            music: "M.O.P. - Cold as Ice (Audio).mp3",
-            message: "You slip by the Orphans and make a friend",
+            message: "You ignore the rebellion and successfully fight off the outside forces. Many years have pasted and now the rebellion has offically declared war against you and The Empire. They have grown profusely in size and strength. There is a good chance you may loose. Should you attempt to fight rebellion or run away your position.",
             choices: [
                 {
-                    text: "Split Up?",
-                    nextLevel: "split",
+                    text: "Fight the rebellion",
+                    nextLevel: "fight2",
                 },
                 {
-                    text: "Stay together",
-                    nextLevel: "stay",
-                },
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                },    
+                    text: "run away",
+                    nextLevel: "end1",
+                },   
                ]
         },
         
-            stay: {
-            background_image: "police2.jpg",
-            music: "KRS-One - Sound of da Police.mp3",
-            message: "The group is too big. The police find us and stick us in Central Booking",
-            choices: [
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                },
+        fight: {
+        background_image: "police2.jpg",
+        message: "You successfully fight off the small rebellions and have a great amount of troops left to fight off the outside invading forces. Congratulations you have successfully made it through your few years",
+        choices: [
+            {
+                text: "Start over",
+                nextLevel: "start",
+            },
+            ]
+        },  
+        fight2: {
+        background_image: "split.gif",
+        message: "You attempt to fight the rebels. Both armies are now severely weakened. A Jedi approaches you and challenges you to a fight. After a few mintues of lightsabder duels you are brought your knees. With their lightsaber at your neck they give you two options. Surrender and Live or attempt to fight and die ",
+        choices: [
+            {
+                text: "Attempt to fight",
+                nextLevel: "fight3",
+            },
+            {
+                text: "Surrender",
+                nextLevel: "surrender",
+            },
             ]
         },
-            
-            split: {
-            background_image: "split.gif",
-            music: "Police siren sound effect 1.mp3",
-            message: "We split up, to keep the police off our trail",
-            choices: [
-                {
-                    text: "Grand Central",
-                    nextLevel: "gc",
-                },
-                {
-                    text: "Central Park",
-                    nextLevel: "cp",
-                },
-                {
-                    text: "Ajax",
-                    nextLevel: "ajax",
-                },
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                },
-            ]
-        },
-        
-    
-        gc: {
-            background_image: "lizzies1.gif",
-            music: "Lil' Kim feat. Lil Cease - Crush On You (1997).mp3",
-            message: "Time for a break? The Lizzies invite you over. Can you trust them?",
-            choices: [
-                {
-                    text: "Hang with the Lizzies?",
-                    nextLevel: "lizzies",
-                },
-                 {
-                    text: "Go meet Swan and the others",
-                    nextLevel: "subway",
-                },
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                },
-            ]
-        },
-        cp: {
+        fight3: {
             background_image: "furies.gif",
-            music: "Terror Squad - Lean Back ft. Fat Joe, Remy Ma.mp3",
-            message: "You run into the baseball furies. Tough fight! You lose a few warriors...",
+            message: "You attempt to grab your ligthsaber but before can the Jedi quickly slits your neck. GAMEOVER",
             choices: [
-                {
-                    text: "Head to subway",
-                    nextLevel: "subway",
-                },
                  {
                     text: "Start over",
                     nextLevel: "start",
                 },
             ]
         },
-        ajax: {
+        surrender: {
             background_image: "ajax2.gif",
-            music: "DMX - Ruff Ryders' Anthem.mp3",
-            message: "Ajax was a brave warrior, but he didn't respect the warrior's code. We never saw him again.",
+            message: "You surrender and are released from your position, you now live in constant fear from your former subjects. But you plan to someday regain control of your former empire",
             choices: [
                 {
-                    text: "Start over",
+                    text: "Start over?",
                     nextLevel: "start",
                 }
             ]
         },
-        lizzies: {
-            background_image: "lizzies2.jpg",
-            music: "Mobb Deep - Shook Ones.mp3",
-            message: "The Lizzies set you up. Only one of you makes it out of their lair.",
-            choices: [
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                }
-            ]
-        },
-        subway: {
-            background_image: "backtobk.gif",
-            music: "Crooklyn Dodgers (Special Ed, Masta Ace & Buckshot) - Crooklyn.mp3",
-            message: "You make it to the D train! Headed home to C.I.! But is it over?",
-            choices: [
-                {
-                    text: "Home to Coney Island",
-                    nextLevel: "coney",
-                },
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                }
-            ]
-        },
-        coney: {
-            background_image: "Untitled-1.gif",
-            music: "Crooklyn Dodgers '95 - Return of the Crooklyn Dodgers.mp3",
-            message: "You made it! The whole city knows...You're the best!",
-            choices: [
-                {
-                    text: "Play Again!?",
-                    nextLevel: "start",
-                }
-            ]
-        },
-        
         }
         };
