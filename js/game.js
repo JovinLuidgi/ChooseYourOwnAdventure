@@ -10,7 +10,7 @@ var game = {
             choices: [
                 {
                     text: "Accpet your fate and become supreme ruler",
-                    nextLevel: "empire",
+                    nextLevel: "empire1",
                 },
 
                 {
@@ -20,7 +20,7 @@ var game = {
             ]
         },
 
-        empire: {
+        empire1: {
             background_image: "cyrus.gif",
             message: "You gain rule over The Empire during a riot. Side 1, the majority, is asking for renovations of security and general well being for their home planet. While Side 2, the minority, want more advancments in your millitary as they fear/forsee a future lose from rebelians and outside forces.",
             choices: [
