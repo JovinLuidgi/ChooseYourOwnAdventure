@@ -101,6 +101,16 @@ var game = {
             },
             ]
         },
+        side2: {
+        background_image: "split.gif",
+        message: "For lack fo time you win!!",
+        choices: [
+            {
+                text: "Start over",
+                nextLevel: "start",
+            },
+            ]
+        },
         fight3: {
             background_image: "furies.gif",
             message: "You attempt to grab your ligthsaber but before can the Jedi quickly slits your neck. GAMEOVER",
